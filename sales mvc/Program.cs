@@ -15,6 +15,8 @@ builder.Services.AddScoped<SeddingService>();
 
 builder.Services.AddScoped<SellerService>();
 builder.Services.AddScoped<DepartmentService>();
+builder.Services.AddScoped<SalesRecordService>();
+
 
 
 

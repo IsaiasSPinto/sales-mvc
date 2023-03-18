@@ -11,8 +11,8 @@ using sales_mvc.Data;
 namespace sales_mvc.Migrations
 {
     [DbContext(typeof(sales_mvcContext))]
-    [Migration("20230317101045_DepartmenteForeignKey")]
-    partial class DepartmenteForeignKey
+    [Migration("20230318025714_AddDepartmentIdKey")]
+    partial class AddDepartmentIdKey
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,7 +83,8 @@ namespace sales_mvc.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(60)
+                        .HasColumnType("varchar(60)");
 
                     b.HasKey("Id");
 
